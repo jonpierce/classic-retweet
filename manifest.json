@@ -1,0 +1,11 @@
+{
+  "name": "Classic Retweet",
+  "version": "1.0",
+  "description": "Adds classic-style retweets to #NewTwitter. Because sometimes you want to rock it old school.",
+  "content_scripts": [
+    {
+      "matches": ["http://twitter.com/*", "https://twitter.com/*"],
+      "js": ["main.js"]
+    }
+  ]
+}
