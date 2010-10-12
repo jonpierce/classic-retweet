@@ -1,0 +1,8 @@
+<!ENTITY classicretweet.label "Your localized menuitem">
+<!ENTITY classicretweetContext.label "Your Menuitem">
+<!ENTITY classicretweetContext.accesskey "Y">
+<!ENTITY classicretweetToolbarButton.label "Your Toolbar Button">
+<!ENTITY classicretweetToolbarButton.tooltip "This is your toolbar button!">
+<!ENTITY classicretweetSidebar.label "Your Sidebar">
+<!ENTITY classicretweetToolbar.name  "example">
+<!ENTITY classicretweetToolbar.label "This is an example toolbar. You can hide it under View &gt; toolbars &gt; &classicretweetToolbar.name;">

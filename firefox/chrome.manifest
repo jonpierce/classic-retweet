@@ -1,0 +1,6 @@
+content   classicretweet                 chrome/content/
+skin      classicretweet   classic/1.0   chrome/skin/
+locale    classicretweet   en-US         chrome/locale/en-US/
+
+
+overlay   chrome://browser/content/browser.xul   chrome://classicretweet/content/overlay.xul

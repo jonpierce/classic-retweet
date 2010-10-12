@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://classicretweet/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://classicretweet/locale/overlay.dtd">
+<overlay id="classicretweet-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script src="overlay.js"/>
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="classicretweet-strings" src="chrome://classicretweet/locale/overlay.properties"/>
+  </stringbundleset>
+</overlay>
