@@ -1,7 +1,10 @@
 {
   "name": "Classic Retweet",
   "version": "1.0",
-  "description": "Adds classic-style retweets to #NewTwitter. Because sometimes you want to rock it old school.",
+  "description": "Adds classic-style retweets to Twitter's new web interface, aka #NewTwitter. Because sometimes you want to rock it old school.",
+  "icons": { "16": "icon-16.png",
+             "48": "icon-48.png",
+            "128": "icon-128.png" },
   "content_scripts": [
     {
       "matches": ["http://twitter.com/*", "https://twitter.com/*"],
