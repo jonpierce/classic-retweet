@@ -1,6 +1,6 @@
 Adds classic-style retweets to #NewTwitter. Because sometimes you want to rock it old school.
 
-Currently comes in two flavors: 1) a [Chrome extension](https://chrome.google.com/extensions/detail/mejfljhfeahhhicjefeehikaooffggmf), and 2) a bookmarklet (see code below). Want a Firefox version? Have feedback? <a href="mailto:jonpierce+classic-retweet@gmail.com?subject=Classic Retweet">Email me</a>.
+Currently comes in three flavors: 1) a [Chrome extension](https://chrome.google.com/extensions/detail/mejfljhfeahhhicjefeehikaooffggmf), 2) a [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/241011/), and 3) a bookmarklet (see code below). Requests? Feedback? <a href="mailto:jonpierce+classic-retweet@gmail.com?subject=Classic Retweet">Email me</a>.
 
 <pre>
 <code>
