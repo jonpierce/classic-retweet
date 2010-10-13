@@ -26,7 +26,7 @@ var classicretweet = {
     if (doc.location.href.match(/http:\/\/twitter.com|https:\/\/twitter.com/)) {
       var scriptUrl = "chrome://classicretweet/content/classic-retweet.js";
       var scriptContents = classicretweet.getContents(scriptUrl);
-      var script = document.createElement("script");
+      var script = doc.createElement("script");
       script.type = "text/javascript";
       script.innerHTML = scriptContents;
       doc.getElementsByTagName("body")[0].appendChild(script);
