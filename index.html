@@ -1,1 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Classic Retweet - Old school retweets for #NewTwitter</title>
+    <link href="icon-16.png" rel="shortcut icon" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    
+    <a href="http://github.com/jonpierce/classic-retweet">
+      <img alt="Fork me on GitHub" id="ribbon" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" />
+    </a>
+    
+    <div id="container">
+      
+      <div id="tweet-bar">
+        <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="jonpierce" data-related="ClassicRetweet">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+      </div>
+      <div class="clear"></div>
 
+      <div id="header">
+        <img id="logo" src="icon-128.png" />
+        <div id="header-text">
+          <h3 class="name">Classic Retweet</h3>
+          <div class="tagline">old school retweets for #newtwitter</div>
+        </div>
+      </div>
+      
+      <img id="screenshot" src="screenshot.png" />
+      
+      <div id="oneforty-widget-container">
+      <!-- Begin oneforty widget -->
+      <div id="oneforty_classic-retweet_widget" style="width:150px;border:1px solid #C0DEED;padding:0px;font-family:'Lucida Grande',Arial,san-serif;font-size:12px;"> <div style="width:100%;background-color:#e3edf7;"><h3 class="oneforty_widget_title" style="margin:0px;font-size:12px;text-align:center;padding:3px 0px;font-weight:bold;"><a href="http://oneforty.com/item/classic-retweet?utm_source=widget&utm_campaign=review_app" style="color:black;text-decoration:none;">Classic Retweet</a></h3></div> <div id="oneforty_classic-retweet_widget_content" style="margin-top:5px;display:none;"></div> <div style="text-align:center;padding:4px 0px 2px 0px;"><a href="http://oneforty.com/item/classic-retweet?utm_source=widget&utm_campaign=review_app" title="Review on oneforty"><img src="https://d1qjmhqkx2f6xm.cloudfront.net/ext/images/v1/review_widget.png" height="28" width="140" alt="Review Classic Retweet on oneforty" style="border:0px;" /></a></div> <script>var elm=document.getElementById("oneforty_classic-retweet_widget_content");elm.style.minHeight="50px";elm.style.display="";var _oneforty = _oneforty || {};_oneforty.protocol = ('https:' == document.location.protocol ? 'https' : 'http');_oneforty.widget_urls = _oneforty.widget_urls || [];_oneforty.widget_urls.push(_oneforty.protocol+"://widgets.oneforty.com/widgets/v2/review_app/classic-retweet.js");(function() {var of=document.createElement('script');of.type='text/javascript';of.async = true;of.src=_oneforty.protocol+'://d1qjmhqkx2f6xm.cloudfront.net/ext/javascripts/v3/loader.js';var of_s=document.getElementsByTagName('script')[0]; of_s.parentNode.insertBefore(of, of_s);})();</script> </div>
+      <!-- End oneforty widget -->
+      </div>
+            
+      <a id="follow-button" href="http://www.twitter.com/jonpierce"><img src="http://twitter-badges.s3.amazonaws.com/follow_bird-b.png" alt="Follow jonpierce on Twitter"/></a>
+      
+      <div id="install-box" style="display: none">
+        <a id="super-conversion-button" class="premier yellow large"></a>
+        <div id="install-links" style="float: right">
+          Also available for <a id="alternate-extension-link"></a> or as a 
+          <a href="javascript:var script = document.createElement('script'); script.type = 'text/javascript'; script.src = 'http://github.com/jonpierce/classic-retweet/raw/master/classic-retweet.js'; document.getElementsByTagName('body')[0].appendChild(script); void(0);">bookmarklet</a>
+        </div>
+      </div>
+      <script>
+      var assumeChrome = true;
+      var extensionLinks = {
+        "Chrome": "https://chrome.google.com/extensions/detail/mejfljhfeahhhicjefeehikaooffggmf",
+        "Firefox": "https://addons.mozilla.org/en-US/firefox/addon/241011/"
+      }
+      if (navigator.userAgent.match(/Firefox/)) {
+        assumeChrome = false;
+      }
+      
+      var extensionButton = document.getElementById("super-conversion-button");
+      extensionButton.href = assumeChrome ? extensionLinks["Chrome"] : extensionLinks["Firefox"];
+      extensionButton.innerHTML = "Try it in " + (assumeChrome ? "Chrome" : "Firefox") + "!";
+      
+      var alternateExtensionLink = document.getElementById("alternate-extension-link");
+      alternateExtensionLink.href = assumeChrome ? extensionLinks["Firefox"] :extensionLinks["Chrome"];
+      alternateExtensionLink.innerHTML = assumeChrome ? "Firefox" : "Chrome";
+      
+      document.getElementById("install-box").style.display = "";
+      </script>
+      
+    </div>
+  </body> 
+</html>
