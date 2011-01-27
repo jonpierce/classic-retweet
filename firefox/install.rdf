@@ -4,16 +4,16 @@
     <em:id>classicretweet@jonpierce.com</em:id>
     <em:type>2</em:type>
     <em:name>Classic Retweet</em:name>
-    <em:version>1.0</em:version>
+    <em:version>1.1</em:version>
     <em:creator>Jon Pierce</em:creator>
     <em:contributor></em:contributor>
-    <em:description>Classic retweets for #NewTwitter. Because sometimes you want to rock it old school.</em:description>
+    <em:description>Old school retweets for #NewTwitter.</em:description>
     <em:iconURL>chrome://classicretweet/skin/icon.png</em:iconURL>
     <em:targetApplication>
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- Firefox -->
         <em:minVersion>3.0</em:minVersion>
-        <em:maxVersion>4.0b8pre</em:maxVersion>
+        <em:maxVersion>4.0.*</em:maxVersion>
       </Description>
     </em:targetApplication>
   </Description>

@@ -1,7 +1,7 @@
 {
   "name": "Classic Retweet",
-  "version": "1.0",
-  "description": "Adds classic-style retweets to Twitter's new web interface, aka #NewTwitter. Because sometimes you want to rock it old school.",
+  "version": "1.1",
+  "description": "Old school retweets for #NewTwitter.",
   "icons": { "16": "icon-16.png",
              "48": "icon-48.png",
             "128": "icon-128.png" },
