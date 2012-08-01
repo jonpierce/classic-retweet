@@ -8,11 +8,11 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
   $("#page-container").delegate(".tweet", "mouseover", function() {
     if (!$(this).attr(enabled)) {
       $(this).attr(enabled, "true");
-      var replyAction = $(this).find(".action-reply-container");
+      var replyAction = $(this).find(".action-reply-container").first(); // guard against embedded copy ("permalink-tweet" vs "original-tweet") on individual tweet page
       var classicRetweetAction = replyAction.clone();
       var link = classicRetweetAction.find(".js-action-reply");
       var label = "Classic RT";
-      link.toggleClass("js-action-reply");
+      link.removeClass("js-action-reply");
       link.removeAttr("data-modal");
       link.find("i").attr("class", "sm-rt");
       link.find("b").html(label);
@@ -21,7 +21,7 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
 
       link.click(function(event) {
         var tweet = $(this).closest(".tweet");
-        var text = tweet.find(".js-tweet-text");
+        var text = tweet.find(".js-tweet-text").first(); // guard as above
         text.find("a").each(function(index) {
           $(this).html($(this).data("expanded-url"));
         });
