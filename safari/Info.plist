@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Author</key>
+  <string>Jon Pierce</string>
+  <key>Builder Version</key>
+  <string>8536.25</string>
+  <key>CFBundleDisplayName</key>
+  <string>Classic Retweet</string>
+  <key>CFBundleIdentifier</key>
+  <string>com.jonpierce.classicretweet</string>
+  <key>CFBundleInfoDictionaryVersion</key>
+  <string>6.0</string>
+  <key>CFBundleShortVersionString</key>
+  <string>1.8</string>
+  <key>CFBundleVersion</key>
+  <string>1.8</string>
+  <key>Chrome</key>
+  <dict/>
+  <key>Content</key>
+  <dict>
+    <key>Scripts</key>
+    <dict>
+      <key>End</key>
+      <array>
+        <string>classic-retweet.js</string>
+      </array>
+    </dict>
+  </dict>
+  <key>Description</key>
+  <string>Old school retweets for #NewTwitter.</string>
+  <key>ExtensionInfoDictionaryVersion</key>
+  <string>1.0</string>
+  <key>Permissions</key>
+  <dict>
+    <key>Website Access</key>
+    <dict>
+      <key>Allowed Domains</key>
+      <array>
+        <string>twitter.com</string>
+      </array>
+      <key>Include Secure Pages</key>
+      <true/>
+      <key>Level</key>
+      <string>Some</string>
+    </dict>
+  </dict>
+  <key>Website</key>
+  <string>http://jonpierce.github.com/classic-retweet/</string>
+</dict>
+</plist>
