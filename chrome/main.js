@@ -1,4 +1,7 @@
-var script = document.createElement("script");
-script.type = "text/javascript";
-script.src = chrome.extension.getURL("classic-retweet.js");
-document.getElementsByTagName("body")[0].appendChild(script)
+var scripts = ["jquery.min.js", "classic-retweet.js"];
+for (var i = 0; i < scripts.length; i++) {
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = chrome.extension.getURL(scripts[i]);
+  document.getElementsByTagName("body")[0].appendChild(script)
+}
