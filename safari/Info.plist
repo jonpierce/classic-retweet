@@ -13,9 +13,9 @@
   <key>CFBundleInfoDictionaryVersion</key>
   <string>6.0</string>
   <key>CFBundleShortVersionString</key>
-  <string>1.9</string>
+  <string>1.10</string>
   <key>CFBundleVersion</key>
-  <string>1.9</string>
+  <string>1.10</string>
   <key>Chrome</key>
   <dict/>
   <key>Content</key>
@@ -24,7 +24,6 @@
     <dict>
       <key>End</key>
       <array>
-        <string>jquery.min.js</string>
         <string>classic-retweet.js</string>
       </array>
     </dict>

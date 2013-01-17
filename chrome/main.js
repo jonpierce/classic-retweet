@@ -1,4 +1,4 @@
-var scripts = ["jquery.min.js", "classic-retweet.js"];
+var scripts = ["classic-retweet.js"];
 for (var i = 0; i < scripts.length; i++) {
   var script = document.createElement("script");
   script.type = "text/javascript";

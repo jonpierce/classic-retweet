@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Classic Retweet",
-  "version": "1.9",
+  "version": "1.10",
   "description": "Old school retweets for #NewTwitter.",
   "icons": { "16": "icon-16.png",
              "48": "icon-48.png",
@@ -13,7 +13,6 @@
     }
   ],
   "web_accessible_resources": [
-    "jquery.min.js",
     "classic-retweet.js"
   ]
 }

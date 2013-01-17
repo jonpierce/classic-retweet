@@ -92,4 +92,4 @@
       });
     }
   });
-})(jQuery.noConflict(true));
+})($);

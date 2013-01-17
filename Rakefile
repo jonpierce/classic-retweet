@@ -9,14 +9,6 @@ CHROME = "chrome"
 FIREFOX = "firefox"
 SAFARI = "safari"
 
-CHROME_BUILD_DIR = File.join(BUILD_DIR, CHROME)
-FIREFOX_BUILD_DIR = File.join(BUILD_DIR, FIREFOX)
-SAFARI_BUILD_DIR = File.join(BUILD_DIR, SAFARI)
-
-SAFARI_EXTENSION_BUILD_DIR = File.join(SAFARI_BUILD_DIR, "classicretweet.safariextension")
-
-ZIP_EXCLUDE = "*.DS_Store *.git*"
-
 desc "Clean"
 task :clean do
   rm_rf BUILD_DIR
@@ -34,33 +26,34 @@ end
 desc "Build Chrome extension"
 task :build_chrome => :prep do
   cp_r CHROME, BUILD_DIR
-  cp JQUERY_SCRIPT, CHROME_BUILD_DIR
-  cp CLASSIC_RETWEET_SCRIPT, CHROME_BUILD_DIR
-  cp Dir.glob("icon-*.png"), CHROME_BUILD_DIR
-  sh "cd #{CHROME_BUILD_DIR}; zip -r #{NAME}.zip * -x #{ZIP_EXCLUDE}"
+  ext_dir = File.join(BUILD_DIR, CHROME)
+  cp CLASSIC_RETWEET_SCRIPT, ext_dir
+  cp Dir.glob("icon-*.png"), ext_dir
+  sh "cd #{ext_dir}; zip -r #{NAME}.zip * -x *.DS_Store *.git*"
 end
 
 desc "Build Firefox extension"
 task :build_firefox => :prep do
   cp_r FIREFOX, BUILD_DIR
-  data_dir = File.join(FIREFOX_BUILD_DIR, "data")
+  ext_dir = File.join(BUILD_DIR, FIREFOX)
+  data_dir = File.join(ext_dir, "data")
   mkdir_p data_dir
   cp JQUERY_SCRIPT, data_dir
   cp CLASSIC_RETWEET_SCRIPT, data_dir
-  cp "icon-48.png", File.join(FIREFOX_BUILD_DIR, "icon.png")
-  cp "icon-64.png", File.join(FIREFOX_BUILD_DIR)
-  sh "cd #{FIREFOX_BUILD_DIR}; cfx xpi"
+  cp "icon-48.png", File.join(ext_dir, "icon.png")
+  cp "icon-64.png", File.join(ext_dir)
+  sh "cd #{ext_dir}; cfx xpi"
 end
 
 desc "Build Safafi extension"
 task :build_safari => :prep do
-  mkdir_p SAFARI_EXTENSION_BUILD_DIR
-  cp_r Dir[File.join(SAFARI, "*")], SAFARI_EXTENSION_BUILD_DIR
-  cp JQUERY_SCRIPT, SAFARI_EXTENSION_BUILD_DIR
-  cp CLASSIC_RETWEET_SCRIPT, SAFARI_EXTENSION_BUILD_DIR
-  cp "icon-128.png", File.join(SAFARI_EXTENSION_BUILD_DIR, "Icon.png")
+  ext_dir = File.join(BUILD_DIR, SAFARI, "classicretweet.safariextension")
+  mkdir_p ext_dir
+  cp_r Dir[File.join(SAFARI, "*")], ext_dir
+  cp CLASSIC_RETWEET_SCRIPT, ext_dir
+  cp "icon-128.png", File.join(ext_dir, "Icon.png")
   ["128", "48", "32"].each do |size|
-    cp "icon-#{size}.png", File.join(SAFARI_EXTENSION_BUILD_DIR, "Icon-#{size}.png")
+    cp "icon-#{size}.png", File.join(ext_dir, "Icon-#{size}.png")
   end
 end
 
