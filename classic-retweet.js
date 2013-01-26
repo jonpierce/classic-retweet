@@ -1,6 +1,5 @@
 (function($) {
   var enabled = "classic-retweet-enabled", script = null;
-  var escapeQuotes = function(str) { return str.replace(/['"]/g, "\\$&"); };
   /*
   // To place caret at end of tweet
   var placeCaretAtEnd = function(el) {
@@ -16,7 +15,7 @@
   if (dialog.length) {
     dialog.find(".modal-close").on("click", function(event) {
       dialog.find("#tweet-box-global").empty();
-      dialog.find(".tweet-counter").removeClass("superwarn").html("140");
+      dialog.find(".tweet-counter").removeClass("superwarn").text("140");
     });
   }
   */
@@ -30,7 +29,7 @@
       link.removeAttr("data-modal");
       var label = "Classic RT";
       link.attr("title", label);
-      link.find("b").html(label);
+      link.find("b").text(label);
       link.find("i").attr("class", "sm-rt");
       replyAction.after(classicRetweetAction);
 
@@ -38,15 +37,15 @@
         var tweet = $(this).closest(".tweet");
         var text = tweet.find(".js-tweet-text").first(); // guard as above
         text.find("a").each(function(index) {
-          $(this).html($(this).data("expanded-url"));
+          $(this).text($(this).data("expanded-url"));
         });
         var title = "Classic Retweet", content = "RT @" + tweet.data("screen-name") + ": " + text.text().trim();
         var dialog = $("#global-tweet-dialog");
         // if we have the new tweet dialog, use that
         if (dialog.length) {
           $("#global-new-tweet-button").trigger("click");
-          dialog.find("h3").html(title);
-          dialog.find("#tweet-box-global").html(content).focus();
+          dialog.find("h3").text(title);
+          dialog.find("#tweet-box-global").text(content).focus();
           dialog.find("textarea.tweet-box-shadow").val(content);
           // placeCaretAtEnd(dialog.find("#tweet-box-global").get(0));
         }
@@ -64,26 +63,6 @@
               defaultContent: content,
               origin: "new-tweet-titlebar-button"
             }).open().focus();
-          }
-          // else inject a script to do it (e.g. safari)
-          else {
-            if (script != null) {
-              script.parentNode.removeChild(script);
-            }
-            script = document.createElement("script");
-            script.textContent = 'if (window.twttr && twttr.widget && twttr.widget.TweetDialog) { ' +
-              'new twttr.widget.TweetDialog({ ' +
-                'basic: false, ' +
-                'modal: false, ' +
-                'draggable: true, ' +
-                'template: { ' +
-                  'title: "' + escapeQuotes(title) + '" ' +
-                '}, ' +
-                'defaultContent: "' + escapeQuotes(content) + '", ' +
-                'origin: "new-tweet-titlebar-button" ' +
-              '}).open().focus(); ' +
-            ' }';
-            document.body.insertBefore(script, document.body.firstChild);
           }
         }
         event.preventDefault();
