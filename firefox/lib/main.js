@@ -1,5 +1,5 @@
-var pageMod = require("page-mod");
-var self = require("self");
+var pageMod = require("sdk/page-mod");
+var self = require("sdk/self");
 
 pageMod.PageMod({
   include: "*.twitter.com",
